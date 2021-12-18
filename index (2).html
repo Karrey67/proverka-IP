@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+</head>
+<body>
+<script>
+    var ip = prompt('Введите IP адрес:');
+    var reg = /^(2[0-5][0-5]|1\d\d|[1-9](?=\d)\d|[1-9])((\.(2[0-5][0-5]|1\d\d|[1-9](?=\d)\d|\d)){2}|(\.(2[0-5][0-5]|1\d\d|[1-9](?=\d)\d|\d)){4})\.(2[0-5][0-5]|1\d\d|[1-9](?=\d)\d|[1-9])$/;
+    var result, resultLength;
+        if (result = ip.match(reg)){
+        resultLength = result[0].split('.').length;
+
+        alert('Это правильный IPv'+ resultLength +' адрес:\n'+ result[0]);
+        } 
+        else {
+        alert('Введенный вами адрес - ['+ ip +'] неверный!');
+        }
+</script>
+</body>
+</html>
